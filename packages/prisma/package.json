@@ -1,0 +1,26 @@
+{
+	"name": "@rerevolve/prisma",
+	"version": "0.0.0",
+	"private": true,
+	"exports": {
+		".": "./index.ts"
+	},
+	"scripts": {
+		"db-migrate": "prisma migrate",
+		"db-migrate-dev": "prisma migrate dev",
+		"db-migrate-deploy": "prisma migrate deploy",
+		"db-generate": "prisma generate",
+		"db-studio": "prisma studio",
+		"clean": "rm -rf .turbo && rm -rf node_modules"
+	},
+	"devDependencies": {
+		"@rerevolve/eslint-config": "workspace:*",
+		"@rerevolve/typescript-config": "workspace:*",
+		"@types/node": "^22.15.3",
+		"prisma": "^6.17.1"
+	},
+	"dependencies": {
+		"@prisma/client": "^6.17.1",
+		"@prisma/extension-accelerate": "^2.0.2"
+	}
+}

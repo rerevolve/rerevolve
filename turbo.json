@@ -1,21 +1,44 @@
 {
-  "$schema": "https://turborepo.com/schema.json",
-  "ui": "tui",
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
-  }
+	"$schema": "https://turborepo.com/schema.json",
+	"ui": "tui",
+	"tasks": {
+		"@rerevolve/prisma#db-generate": {
+			"cache": false
+		},
+		"@rerevolve/prisma#db-migrate": {
+			"cache": false
+		},
+		"@rerevolve/prisma#db-migrate-dev": {
+			"cache": false
+		},
+		"@rerevolve/prisma#db-migrate-deploy": {
+			"cache": false
+		},
+		"@rerevolve/prisma#db-studio": {
+			"cache": false
+		},
+		"build": {
+			"dependsOn": ["^build", "@rerevolve/prisma#db-generate"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"dev": {
+			"dependsOn": ["@rerevolve/prisma#db-generate"],
+			"cache": false,
+			"persistent": true
+		},
+		"start": {
+			"cache": false,
+			"persistent": true
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"check-types": {
+			"dependsOn": ["^check-types"]
+		},
+		"clean": {
+			"cache": false
+		}
+	}
 }
