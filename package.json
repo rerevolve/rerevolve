@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"scripts": {
-		"build": "turbo run build",
+		"build": "turbo run build --filter=@rerevolve/web...",
 		"dev": "turbo run dev",
 		"start": "turbo run start",
 		"db-generate": "turbo run db-generate",
