@@ -7,12 +7,13 @@
 			"cache": false
 		},
 		"@rerevolve/prisma#db-migrate": {
+			"cache": false,
+			"persistent": true
+		},
+		"@rerevolve/prisma#db-deploy": {
 			"cache": false
 		},
-		"@rerevolve/prisma#db-migrate-dev": {
-			"cache": false
-		},
-		"@rerevolve/prisma#db-migrate-deploy": {
+		"@rerevolve/prisma#db-reset": {
 			"cache": false
 		},
 		"@rerevolve/prisma#db-studio": {
@@ -21,7 +22,8 @@
 		"build": {
 			"dependsOn": ["^build", "@rerevolve/prisma#db-generate"],
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],
-			"outputs": [".next/**", "!.next/cache/**"]
+			"outputs": [".next/**", "!.next/cache/**"],
+			"env": ["DATABASE_URL"]
 		},
 		"dev": {
 			"dependsOn": ["@rerevolve/prisma#db-generate"],
