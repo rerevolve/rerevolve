@@ -2,6 +2,7 @@
 	"name": "rerevolve",
 	"private": true,
 	"version": "0.0.0",
+	"description": "ReRevolve - Crafting websites that innovate, inspire, and engage.",
 	"scripts": {
 		"build": "turbo run build --filter=@rerevolve/web...",
 		"dev": "turbo run dev",
@@ -14,15 +15,20 @@
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"check-types": "turbo run check-types",
-		"clean": "turbo run clean && rm -rf .turbo && rm -rf node_modules"
+		"clean": "turbo run clean && rm -rf .turbo && rm -rf node_modules && rm -rf pnpm-lock.yaml && rm -rf yarn.lock && rm -rf package-lock.json"
 	},
 	"devDependencies": {
 		"prettier": "^3.6.2",
 		"turbo": "^2.5.8",
 		"typescript": "5.9.2"
 	},
-	"packageManager": "pnpm@9.0.0",
+	"packageManager": "pnpm@10.19.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
 	"engines": {
-		"node": ">=18"
+		"node": ">=22.14.0",
+		"pnpm": ">=10.19.0"
 	}
 }

@@ -12,9 +12,9 @@
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
 	},
 	"dependencies": {
+		"@rerevolve/prisma": "workspace:*",
 		"@rerevolve/tailwind-config": "workspace:*",
 		"@rerevolve/ui": "workspace:*",
-		"@rerevolve/prisma": "workspace:*",
 		"lucide-react": "^0.546.0",
 		"next": "^15.5.0",
 		"react": "^19.1.0",
@@ -28,5 +28,9 @@
 		"@types/react-dom": "19.1.1",
 		"eslint": "^9.34.0",
 		"typescript": "5.9.2"
+	},
+	"engines": {
+		"node": ">=22.14.0",
+		"pnpm": ">=10.19.0"
 	}
 }

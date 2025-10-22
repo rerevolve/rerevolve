@@ -15,7 +15,8 @@
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",
 		"generate:component": "turbo gen react-component",
-		"check-types": "tsc --noEmit"
+		"check-types": "tsc --noEmit",
+		"clean": "rm -rf .turbo && rm -rf node_modules"
 	},
 	"devDependencies": {
 		"@rerevolve/eslint-config": "workspace:*",
