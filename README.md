@@ -1,3 +1,19 @@
+<!-- PROJECT LOGO -->
+
+
+<p align="center">
+  <a href="https://github.com/rerevolve/rerevolve">
+    <img src="https://www.rerevolve.com/logo.svg" alt="ReRevolve Logo" width="120">
+  </a>
+</p>
+
+
+  <p align="center">
+  <b>Rerevolve.com</b><br>
+  Modern Open-Source Solutions for the Web 🌐
+</p>
+</p>
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
